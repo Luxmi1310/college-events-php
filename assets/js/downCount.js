@@ -1,0 +1,5 @@
+/**
+ * downCount: Simple Countdown clock with offset
+ * Author: Sonny T. <hi@sonnyt.com>, sonnyt.com
+*/
+!function(e){e.fn.downCount=function(t,n){var $=e.extend({date:null,offset:null},t);$.date||e.error("Date is not defined."),Date.parse($.date)||e.error("Incorrect date format, it should look like this, 12/24/2012 12:00:00.");var o=this,f=function(){var e=new Date,t=e.getTime()+6e4*e.getTimezoneOffset();return new Date(t+36e5*$.offset)},r=setInterval(function e(){var t=new Date($.date),d=f(),i=t-d;if(i<0){clearInterval(r),n&&"function"==typeof n&&n();return}var s=36e5,u=24*s,a=Math.floor(i/u),l=Math.floor(i%u/s),c=Math.floor(i%s/6e4),h=Math.floor(i%6e4/1e3);a=String(a).length>=2?a:"0"+a,l=String(l).length>=2?l:"0"+l,c=String(c).length>=2?c:"0"+c,h=String(h).length>=2?h:"0"+h;var x=1===a?"day":"days",_=1===l?"hour":"hours",m=1===c?"minute":"minutes",g=1===h?"second":"seconds";o.find(".days").text(a),o.find(".hours").text(l),o.find(".minutes").text(c),o.find(".seconds").text(h),o.find(".days_ref").text(x),o.find(".hours_ref").text(_),o.find(".minutes_ref").text(m),o.find(".seconds_ref").text(g)},1e3)}}(jQuery);
