@@ -17,7 +17,7 @@ A dynamic web application built with **Vanilla PHP** and **MySQL** to manage cam
 2. Move the folder to your local server (e.g., `C:/xampp/htdocs/`).
 3. Open **phpMyAdmin** and create a database named `college_db`.
 4. Import the `database.sql` file included in this repository.
-5. Update your database credentials in `db_connect.php`:
+5. Update your database credentials in `db_config.php`:
    ```php
    $servername = "localhost";
    $username = "root";
